@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Surveillance Puskesmas Kediri</title>
+
+    <meta name="description"
+        content="Website Surveillance Epidemiologi Puskesmas Kediri, Kabupaten Lombok Barat">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container navbar">
+
+        <div class="brand">
+
+            <img src="assets/logo-puskesmas.png"
+                 alt="Logo Puskesmas Kediri"
+                 class="logo">
+
+            <div class="brand-text">
+                <strong>PUSKESMAS KEDIRI</strong>
+                <span>SURVEILLANCE EPIDEMIOLOGI</span>
+            </div>
+
+        </div>
+
+
+        <div class="government-logos">
+
+            <img src="assets/logo-surveillance.png"
+                 alt="Logo Surveillance Epidemiologi">
+
+            <img src="assets/logo-lombok-barat.png"
+                 alt="Logo Kabupaten Lombok Barat">
+
+        </div>
+
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+
+
+    <nav id="mainMenu">
+
+        <div class="container nav-links">
+
+            <a href="#beranda">Beranda</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#skdr">SKDR</a>
+            <a href="#buletin">Buletin</a>
+            <a href="#penyakit">Penyakit</a>
+            <a href="#kontak">Kontak</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="beranda">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="badge">
+                <i class="fas fa-shield-virus"></i>
+                SURVEILLANCE EPIDEMIOLOGI
+            </span>
+
+            <h1>
+                Sistem Informasi
+                <span>Surveillance</span>
+                Puskesmas Kediri
+            </h1>
+
+            <p>
+                Pusat informasi pemantauan penyakit, kewaspadaan dini,
+                SKDR dan informasi epidemiologi wilayah kerja
+                Puskesmas Kediri Kabupaten Lombok Barat.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#dashboard" class="btn primary">
+                    <i class="fas fa-chart-line"></i>
+                    Lihat Dashboard
+                </a>
+
+                <a href="#buletin" class="btn secondary">
+                    <i class="fas fa-newspaper"></i>
+                    Buletin Mingguan
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="pulse-icon">
+                <i class="fas fa-heart-pulse"></i>
+            </div>
+
+            <h3>Surveillance Aktif</h3>
+
+            <p>
+                Pemantauan dan deteksi dini penyakit
+                secara berkelanjutan.
+            </p>
+
+            <div class="status">
+                <span></span>
+                Sistem Berjalan
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATISTIK ================= -->
+
+<section class="statistics" id="dashboard">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>MONITORING</span>
+
+            <h2>Dashboard Surveillance</h2>
+
+            <p>
+                Ringkasan data surveillance epidemiologi
+                Puskesmas Kediri.
+            </p>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fas fa-virus"></i>
+                </div>
+
+                <div>
+                    <h3 id="totalKasus">0</h3>
+                    <p>Total Kasus</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fas fa-user-check"></i>
+                </div>
+
+                <div>
+                    <h3 id="kasusAktif">0</h3>
+                    <p>Kasus Aktif</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fas fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+                    <h3 id="sinyalSKDR">0</h3>
+                    <p>Sinyal SKDR</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+                    <i class="fas fa-hospital"></i>
+                </div>
+
+                <div>
+                    <h3 id="fasyankes">1</h3>
+                    <p>Fasyankes</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKDR ================= -->
+
+<section class="skdr-section" id="skdr">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>KEWASPADAAN DINI</span>
+
+            <h2>Surveilans SKDR</h2>
+
+            <p>
+                Sistem Kewaspadaan Dini dan Respons terhadap
+                potensi kejadian luar biasa.
+            </p>
+
+        </div>
+
+
+        <div class="skdr-grid">
+
+            <div class="skdr-card">
+
+                <div class="skdr-number">
+                    01
+                </div>
+
+                <i class="fas fa-magnifying-glass-chart"></i>
+
+                <h3>Deteksi Dini</h3>
+
+                <p>
+                    Pemantauan penyakit berpotensi KLB
+                    secara rutin.
+                </p>
+
+            </div>
+
+
+            <div class="skdr-card">
+
+                <div class="skdr-number">
+                    02
+                </div>
+
+                <i class="fas fa-bell"></i>
+
+                <h3>Peringatan Dini</h3>
+
+                <p>
+                    Identifikasi sinyal peningkatan kasus
+                    secara cepat.
+                </p>
+
+            </div>
+
+
+            <div class="skdr-card">
+
+                <div class="skdr-number">
+                    03
+                </div>
+
+                <i class="fas fa-person-running"></i>
+
+                <h3>Respons Cepat</h3>
+
+                <p>
+                    Tindakan epidemiologi terhadap
+                    sinyal penyakit.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BULETIN ================= -->
+
+<section class="bulletin" id="buletin">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>INFORMASI TERBARU</span>
+
+            <h2>Buletin Surveillance</h2>
+
+            <p>
+                Publikasi informasi surveillance mingguan.
+            </p>
+
+        </div>
+
+
+        <div class="bulletin-grid">
+
+            <article class="bulletin-card">
+
+                <div class="bulletin-header">
+                    <span>MINGGU KE-38</span>
+                    <i class="fas fa-file-medical"></i>
+                </div>
+
+                <h3>
+                    Buletin Mingguan SKDR
+                    Puskesmas Kediri
+                </h3>
+
+                <p>
+                    Informasi perkembangan penyakit dan
+                    hasil pemantauan surveillance mingguan.
+                </p>
+
+                <a href="#" class="read-more">
+                    Baca Buletin
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="bulletin-card">
+
+                <div class="bulletin-header">
+                    <span>SKDR</span>
+                    <i class="fas fa-chart-column"></i>
+                </div>
+
+                <h3>
+                    Situasi Epidemiologi
+                </h3>
+
+                <p>
+                    Ringkasan situasi penyakit menular
+                    dan tidak menular.
+                </p>
+
+                <a href="#" class="read-more">
+                    Lihat Data
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="bulletin-card">
+
+                <div class="bulletin-header">
+                    <span>INFO</span>
+                    <i class="fas fa-circle-info"></i>
+                </div>
+
+                <h3>
+                    Informasi Kesehatan
+                </h3>
+
+                <p>
+                    Edukasi kesehatan dan informasi
+                    kewaspadaan penyakit.
+                </p>
+
+                <a href="#" class="read-more">
+                    Selengkapnya
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PENYAKIT ================= -->
+
+<section class="disease" id="penyakit">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>PEMANTAUAN</span>
+
+            <h2>Penyakit Prioritas</h2>
+
+            <p>
+                Pemantauan penyakit yang menjadi perhatian
+                surveillance epidemiologi.
+            </p>
+
+        </div>
+
+
+        <div class="disease-grid">
+
+            <div class="disease-card">
+                <i class="fas fa-mosquito"></i>
+                <h3>Malaria</h3>
+                <p>Pemantauan kasus malaria.</p>
+            </div>
+
+            <div class="disease-card">
+                <i class="fas fa-lungs-virus"></i>
+                <h3>ISPA</h3>
+                <p>Pemantauan penyakit pernapasan.</p>
+            </div>
+
+            <div class="disease-card">
+                <i class="fas fa-droplet"></i>
+                <h3>Diare</h3>
+                <p>Pemantauan penyakit diare.</p>
+            </div>
+
+            <div class="disease-card">
+                <i class="fas fa-baby"></i>
+                <h3>Campak</h3>
+                <p>Pemantauan penyakit campak.</p>
+            </div>
+
+            <div class="disease-card">
+                <i class="fas fa-virus"></i>
+                <h3>DBD</h3>
+                <p>Pemantauan demam berdarah.</p>
+            </div>
+
+            <div class="disease-card">
+                <i class="fas fa-person-circle-exclamation"></i>
+                <h3>Penyakit Lainnya</h3>
+                <p>Pemantauan penyakit potensial KLB.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div>
+
+            <span>SURVEILLANCE PUSKESMAS KEDIRI</span>
+
+            <h2>
+                Bersama menjaga kesehatan
+                masyarakat.
+            </h2>
+
+            <p>
+                Deteksi dini, respons cepat,
+                masyarakat sehat.
+            </p>
+
+        </div>
+
+
+        <a href="#kontak" class="btn white">
+            Hubungi Kami
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KONTAK ================= -->
+
+<section class="contact" id="kontak">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>HUBUNGI KAMI</span>
+
+            <h2>Puskesmas Kediri</h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-item">
+
+                <i class="fas fa-location-dot"></i>
+
+                <div>
+
+                    <h3>Alamat</h3>
+
+                    <p>
+                        Puskesmas Kediri<br>
+                        Kabupaten Lombok Barat
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i class="fas fa-phone"></i>
+
+                <div>
+
+                    <h3>Telepon</h3>
+
+                    <p>
+                        Nomor kontak Puskesmas
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i class="fas fa-envelope"></i>
+
+                <div>
+
+                    <h3>Email</h3>
+
+                    <p>
+                        Email Puskesmas Kediri
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+
+            <strong>
+                SURVEILLANCE PUSKESMAS KEDIRI
+            </strong>
+
+            <p>
+                Kabupaten Lombok Barat
+            </p>
+
+        </div>
+
+
+        <div class="social">
+
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Puskesmas Kediri.
+        Surveillance Epidemiologi.
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
